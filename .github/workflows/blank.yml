@@ -63,7 +63,7 @@ jobs:
           url: https://www.pgyer.com/apiv2/app/upload
           method: POST
           forms: '{"_api_key":"${{ secrets.P_API_KEY }}", "buildInstallType":2, "userKey": "${{ secrets.P_USER_KEY }}", "buildPassword": "${{ secrets.POLESTAR_PGYER_BUILD_PASSWORD }}"}'
-          fileForms: '{"file":"app/build/outputs/apk/dev/debug/com.polestar.china.android-dev-debug.apk"}'
+          fileForms: '{"file":"app/build/outputs/apk/debug/app-debug.apk"}'
 
       - name: Generate QR Code
         uses: SnowCait/qrcode@v1.0.0
