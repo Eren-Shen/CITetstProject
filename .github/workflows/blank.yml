@@ -32,10 +32,10 @@ jobs:
           path: app/build/outputs/apk/debug/app-debug.apk
 
       # step：向蒲公英上传文件
-#      - name: Upload To Pgyer
-#        uses: JantHsueh/upload-file-action@master
-#        with:
-#          url: https://www.pgyer.com/apiv2/app/upload
-#          method: POST
-#          forms: '{"_api_key":"${{ secrets.P_API_KEY }}","buildInstallType":3}'
-#          fileForms: '{"file":"app/build/outputs/apk/debug/xw-debug.apk"}'
+      - name: Upload To Pgyer
+        uses: JantHsueh/upload-file-action@master
+        with:
+          url: https://www.pgyer.com/apiv2/app/upload
+          method: POST
+          forms: '{"_api_key":"${{ secrets.P_API_KEY }}","buildInstallType":3}'
+          fileForms: '{"file":"app/build/outputs/apk/debug/app-debug.apk"}'
