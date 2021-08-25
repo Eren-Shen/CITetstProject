@@ -24,3 +24,21 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
+
+      # 自定义的 action用于获取apk中的信息, 使用请看 https://github.com/lumotime/get-apk-info-action.
+      - name: get first app info
+        id: app_info
+        uses: lumotime/get-apk-info-action@v1.0.0
+        with:
+          apkPath: example-first_app-release.apk
+
+
+      # 上传 apk 到 蒲公英. secrets 配置请看下面 私密信息配置
+      # 蒲公英接口参数请看: https://www.pgyer.com/doc/view/api#paramInfo 上传 App接口部分
+      # action 使用示例请看  https://github.com/lumotime/upload-pgyer-apk-file
+#      - name: upload first app to Pgyer
+#        id: upload_pgyer
+#        uses: lumotime/upload-pgyer-apk-file@v1.0.0
+#        with:
+#          forms: '{"_api_key":"${{secrets.pgyer_key}}","buildInstallType":2, "buildPassword": "${{secrets.pgyer_install_password}}"}'
+#          fileForms: '{"file":"example-first_app-release.apk"}'
