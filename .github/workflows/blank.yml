@@ -47,7 +47,7 @@ jobs:
           path: qrcode.png
 
 
-      name: Send mail
+      - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
           server_address: smtp.exmail.qq.com
