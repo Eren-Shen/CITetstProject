@@ -39,23 +39,23 @@ jobs:
           name: app
           path: app/build/outputs/apk/debug/app-debug.apk
 
-      - name: Record Time
-        id: time
-        uses: JantHsueh/get-time-action@master
-        with:
-          timeZone: 8
+#       - name: Record Time
+#         id: time
+#         uses: JantHsueh/get-time-action@master
+#         with:
+#           timeZone: 8
 
-      - name: Get git log
-        id: git_log
-        uses: JantHsueh/get-git-log-action@master
-        with:
-          tag: v1.0.2
+#       - name: Get git log
+#         id: git_log
+#         uses: JantHsueh/get-git-log-action@master
+#         with:
+#           tag: v1.0.2
 
-      - name: Preparing DEV APK
-        id: dev_apk
-        uses: JantHsueh/get-apk-info-action@master
-        with:
-          apkPath: app/build/outputs/apk/dev/release/com.polestar.china.android-dev-debug.apk
+#       - name: Preparing DEV APK
+#         id: dev_apk
+#         uses: JantHsueh/get-apk-info-action@master
+#         with:
+#           apkPath: app/build/outputs/apk/dev/release/com.polestar.china.android-dev-debug.apk
 
       - name: Uploading Dev to Pgyer
         uses: JantHsueh/upload-file-action@master
