@@ -52,17 +52,17 @@ jobs:
 #         with:
 #           apkPath: app/build/outputs/apk/dev/release/com.polestar.china.android-dev-debug.apk
 
+#       - name: upload_pgyer
+#         uses: lumotime/upload-pgyer-apk-file@v1.0.0
+#         with: 
+#           forms: '{"_api_key":"${{secrets.P_API_KEY}}","buildInstallType":2, "buildPassword": "${{secrets.POLESTAR_PGYER_BUILD_PASSWORD}}"}'
+#           fileForms: '{"file":app/build/outputs/apk/debug/app-debug.apk"}'
       - name: upload_pgyer
-        uses: lumotime/upload-pgyer-apk-file@v1.0.0
-        with: 
-          forms: '{"_api_key":"${{secrets.P_API_KEY}}","buildInstallType":2, "buildPassword": "${{secrets.POLESTAR_PGYER_BUILD_PASSWORD}}"}'
-          fileForms: '{"file":app/build/outputs/apk/debug/app-debug.apk"}'
-
-#         with:
-#           url: https://www.pgyer.com/apiv2/app/upload
-#           method: POST
-#           forms: '{"_api_key":"${{ secrets.P_API_KEY }}", "buildInstallType":2, "userKey": "${{ secrets.POLESTAR_PGYER_USER_KEY }}", "buildPassword": "${{ secrets.POLESTAR_PGYER_BUILD_PASSWORD }}"}'
-#           fileForms: '{"file":"app/build/outputs/apk/debug/app-debug.apk"}'
+        with:
+          url: https://www.pgyer.com/apiv2/app/upload
+          method: POST
+          forms: '{"_api_key":"${{ secrets.P_API_KEY }}", "buildInstallType":2, "userKey": "${{ secrets.POLESTAR_PGYER_USER_KEY }}", "buildPassword": "${{ secrets.POLESTAR_PGYER_BUILD_PASSWORD }}"}'
+          fileForms: '{"file":"app/build/outputs/apk/debug/app-debug.apk"}'
 
       - name: Generate QR Code
         uses: SnowCait/qrcode@v1.0.0
