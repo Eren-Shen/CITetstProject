@@ -30,24 +30,12 @@ jobs:
        with:
          name: app
          path: app/build/outputs/apk/debug/xw-debug.apk
-      # 自定义的 action用于获取apk中的信息, 使用请看 https://github.com/lumotime/get-apk-info-action.
 
       # step：向蒲公英上传文件
-      - name: Upload To Pgyer
-        uses: JantHsueh/upload-file-action@master
-        with:
-          url: https://www.pgyer.com/apiv2/app/upload
-          method: POST
-          # ${{ secrets.pgyer_key }} 使用秘钥，如何设置下面会介绍
-          forms: '{"_api_key":"${{ secrets.P_API_KEY }}","buildInstallType":3}'
-          fileForms: '{"file":"app/build/outputs/apk/debug/xw-debug.apk"}'
-
-      # 上传 apk 到 蒲公英. secrets 配置请看下面 私密信息配置
-      # 蒲公英接口参数请看: https://www.pgyer.com/doc/view/api#paramInfo 上传 App接口部分
-      # action 使用示例请看  https://github.com/lumotime/upload-pgyer-apk-file
-#      - name: upload first app to Pgyer
-#        id: upload_pgyer
-#        uses: lumotime/upload-pgyer-apk-file@v1.0.0
+#      - name: Upload To Pgyer
+#        uses: JantHsueh/upload-file-action@master
 #        with:
-#          forms: '{"_api_key":"${{secrets.pgyer_key}}","buildInstallType":2, "buildPassword": "${{secrets.pgyer_install_password}}"}'
-#          fileForms: '{"file":"example-first_app-release.apk"}'
+#          url: https://www.pgyer.com/apiv2/app/upload
+#          method: POST
+#          forms: '{"_api_key":"${{ secrets.P_API_KEY }}","buildInstallType":3}'
+#          fileForms: '{"file":"app/build/outputs/apk/debug/xw-debug.apk"}'
