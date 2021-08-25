@@ -57,7 +57,7 @@ jobs:
 #         with:
 #           apkPath: app/build/outputs/apk/dev/release/com.polestar.china.android-dev-debug.apk
 
-      - name: Uploading Dev to Pgyer
+      - name: upload_pgyer
         uses: lumotime/upload-pgyer-apk-file@v1.0.0
         with: 
           forms: '{"_api_key":"${{secrets.P_API_KEY}}","buildInstallType":2, "buildPassword": "${{secrets.POLESTAR_PGYER_BUILD_PASSWORD}}"}'
