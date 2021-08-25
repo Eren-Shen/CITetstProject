@@ -25,11 +25,11 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
-     - name: Upload APK
-       uses: actions/upload-artifact@v1
-       with:
-         name: app
-         path: app/build/outputs/apk/debug/xw-debug.apk
+      - name: Upload APK
+        uses: actions/upload-artifact@v1
+        with:
+          name: app
+          path: app/build/outputs/apk/debug/xw-debug.apk
 
       # step：向蒲公英上传文件
 #      - name: Upload To Pgyer
