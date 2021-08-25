@@ -13,5 +13,6 @@ class MainActivity : AppCompatActivity() {
 //        asflksajfdlkas
         //asdjlaskdj
         //asdasdasddas
+        val a = ""
     }
 }
