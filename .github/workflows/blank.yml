@@ -53,7 +53,7 @@ jobs:
           server_address: smtp.exmail.qq.com
           server_port: 465
           username: shenyanglizi@outlook.com
-          password: waty1314
+          password: 
           subject: Polestar极星 build success
           body: Hi! Test from ci
           to: yang.shen@polestar.com
