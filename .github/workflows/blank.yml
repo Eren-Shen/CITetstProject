@@ -47,16 +47,16 @@ jobs:
           path: qrcode.png
 
 
-      - name: Send mail
-        uses: dawidd6/action-send-mail@v2
-        with:
-          server_address: smtp.exmail.qq.com
-          server_port: 465
-          username: 1092417123@
-          password: ${{secrets.QQ_PASSWORD}}
-          subject: Polestar极星 build success
-          body: Hi! Test from ci
-          to: yang.shen@polestar.com
-          from: Mason # <mason@firstai.ai>
-          content_type: text/html
-          attachments: qrcode.png
+#      - name: Send mail
+#        uses: dawidd6/action-send-mail@v2
+#        with:
+#          server_address: smtp.exmail.qq.com
+#          server_port: 465
+#          username: 1092417123@
+#          password: ${{secrets.QQ_PASSWORD}}
+#          subject: Polestar极星 build success
+#          body: Hi! Test from ci
+#          to: yang.shen@polestar.com
+#          from: Mason # <mason@firstai.ai>
+#          content_type: text/html
+#          attachments: qrcode.png
